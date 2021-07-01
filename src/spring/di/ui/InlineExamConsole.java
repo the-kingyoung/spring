@@ -2,13 +2,15 @@ package spring.di.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import spring.di.entity.Exam;
 
+@Component("console")
 public class InlineExamConsole implements ExamConsole {
 
 	@Autowired(required = false)	// setting에 객체가 없더라도 진행이 가능
-	@Qualifier("exam2")
+//	@Qualifier("exam2")
 	private Exam exam;
 	
 	public InlineExamConsole() {
