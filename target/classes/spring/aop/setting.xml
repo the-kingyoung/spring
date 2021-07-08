@@ -15,6 +15,14 @@
 	<bean id="logBeforeAdvice" class="spring.aop.advice.LogBeforeAdvice"/>
 	<bean id="logAfterReturningAdvice" class="spring.aop.advice.LogAfterReturningAdvice"/>
 	<bean id="logAfterThrowingAdvice" class="spring.aop.advice.LogAfterThrowingAdvice"/>
+	
+	<bean id="classicPointCut" class="org.springframework.aop.support.NameMatchMethodPointcut">
+	
+	</bean>
+	
+	
+	
+<!-- 	proxy -->
 	<bean id="exam" class="org.springframework.aop.framework.ProxyFactoryBean">
 		<property name="target" ref="target"/>
 		<property name="interceptorNames">
@@ -26,4 +34,7 @@
 			</list>
 		</property>
 	</bean>
+	
+	
+	
 </beans>
